@@ -12,7 +12,7 @@
         <p>The current stie is still in progress</p>
 
         <h2>Current Data - 2025</h2>
-        <table>
+        <table class="current"> 
             <thead>
                 <tr>
                     <td>YEAR</td>
@@ -32,5 +32,31 @@
                 </tr>
             </tbody>
         </table>
+
+        <p>
+            <button id="monthly" onclick="openmonthly()">Monthly Data</button>
+            <script>
+                function openmonthly(){
+                    window.location.href = "monthly.html"
+                }
+
+            </script>
+        </p>
+        <p>
+            <button id="map" onclick="openmap()">Maps</button>
+            <script>
+                function openmap(){
+                    window.location.href = "map.html"
+                }
+            </script>
+        </p>
+        <p>
+            <button id="graph" onclick="opengraph()">Graphs</button>
+            <script>
+                function opengraph(){
+                    window.location.href = "graphs.html"
+                }
+            </script>
+        </p>
     </body>
 </html>
