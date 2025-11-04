@@ -5,7 +5,50 @@
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Punjab Data</title>
     </head>
+    <style>
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            margin: 20px left;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        th, td {
+
+            border: 1px solid black;
+            padding: 10px 15px;
+            text-align: left;
+
+        }
+    </style>
     <body>
-        <a href="{{ url_for('home') }}">Back to Homepage</a>
+        <h1>Summary Of the Current Data</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>NOB</th>
+                    <th>HC</th>
+                    <th>LC</th>
+                    <th>CN</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button>Monthly Data</button>
+        <button>Graphical Data</button>
+        <button>Review</button>
+
+        
+        <p><a href="{{ url_for('home') }}">Back to Homepage</a></p>
     </body>
 </html>

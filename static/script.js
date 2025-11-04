@@ -7,3 +7,8 @@ function openmap(){
 function opengraph(){
     window.location.href = "/graphs";
 }
+
+function openpunjab(){
+    window.location.href ="/punjab";
+
+}
