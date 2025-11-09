@@ -1,4 +1,4 @@
-from flask import Flask, render_template,request, redirect, url_for, session
+from flask import Flask, render_template,request, redirect, url_for, session, jsonify, request
 
 app = Flask(__name__)
 app.secret_key = "supersecretkey"  # required for session management
@@ -45,6 +45,32 @@ def graphs():
 @app.route('/punjab')
 def punjab_page():
     return render_template('punjab.html')
+
+#--------------#
+#Calendar Data
+#--------------#
+
+@app.route('/calendar')
+def calendar_page():
+    return render_template('calendar.html')
+
+events = [
+    {"title": "meeting", "start": "2025-11-07"},
+    
+]
+@app.route('/events')
+def get_events():
+    """Send all events to the frontend as JSON."""
+    return jsonify(events)
+
+    
+@app.route('/add_event', methods=['POST'])
+def add_event():
+    """Receive new event data from frontend and add to events list."""
+    data = request.get_json()
+    events.append(data)
+    return jsonify({"status": "success"}), 200
+
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -12,3 +12,7 @@ function openpunjab(){
     window.location.href ="/punjab";
 
 }
+
+function opencalendar(){
+    window.location.href ="/calendar"
+}
